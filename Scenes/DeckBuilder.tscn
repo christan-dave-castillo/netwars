@@ -1,0 +1,97 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvb5s92pkcb91"]
+
+[ext_resource type="Script" path="res://Scripts/UI/DeckBuilderUI.gd" id="res_0"]
+
+[node name="DeckBuilder" type="Control"]
+layout_mode = 3
+anchors_rect = Rect2(-1, 0, 1, 1)
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("res_0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_rect = Rect2(0, 0, 1, 1)
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "DECK BUILDER - Select 1-15 Cards"
+theme_override_font_sizes/font_size = 24
+
+[node name="DifficultyLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Difficulty: Easy"
+theme_override_font_sizes/font_size = 14
+
+[node name="DeckSizeLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Deck Size: 0 / 15"
+theme_override_font_sizes/font_size = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = Control.SIZE_EXPAND_FILL
+
+[node name="AvailableCardsLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 0)
+text = "Available Cards:"
+theme_override_font_sizes/font_size = 14
+
+[node name="AvailableCardsContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = Control.SIZE_EXPAND_FILL
+custom_minimum_size = Vector2(250, 300)
+
+[node name="EquippedCardsLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(200, 0)
+text = "Equipped Cards:"
+theme_override_font_sizes/font_size = 14
+
+[node name="EquippedCardsContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = Control.SIZE_EXPAND_FILL
+custom_minimum_size = Vector2(250, 300)
+
+[node name="CardDetailsLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 100)
+text = "Select a card to view details..."
+theme_override_font_sizes/font_size = 12
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = Control.SIZE_EXPAND_FILL
+text = "< BACK"
+
+[node name="EquipButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = Control.SIZE_EXPAND_FILL
+text = "EQUIP (+)"
+disabled = true
+
+[node name="UnequipButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = Control.SIZE_EXPAND_FILL
+text = "UNEQUIP (-)"
+disabled = true
+
+[node name="ClearDeckButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = Control.SIZE_EXPAND_FILL
+text = "CLEAR DECK"
+disabled = true
+
+[node name="StartGameButton" type="Button" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = Control.SIZE_EXPAND_FILL
+text = "START GAME"
+disabled = true

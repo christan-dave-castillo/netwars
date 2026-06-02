@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://b4xkauym7vygk"]
 
 [ext_resource type="Texture2D" uid="uid://d33p1sgg8in6y" path="res://Assets/CardSlot.png" id="1_a3em6"]
+[ext_resource type="Script" uid="uid://8a3b8c9d0e1f" path="res://Scripts/CardSlotIndicator.gd" id="2_indicator"]
+[ext_resource type="Script" uid="uid://c1d2e3f4g5h6" path="res://Scripts/OpponentCardSlot.gd" id="3_opponent"]
 
 [node name="CardSlot" type="Node2D" unique_id=808867315]
+script = ExtResource("3_opponent")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=273102463]
 position = Vector2(5.9604645e-07, 8.940697e-06)
 scale = Vector2(0.4888889, 0.4603774)
 texture = ExtResource("1_a3em6")
+
+[node name="CardSlotIndicator" type="Node2D" parent="." unique_id=3044102051]
+script = ExtResource("2_indicator")

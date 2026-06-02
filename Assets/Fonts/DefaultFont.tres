@@ -1,0 +1,5 @@
+[gd_resource type="FontFile" format=3 uid="uid://bpb2duj3lqevk"]
+
+[resource]
+font_names = PackedStringArray()
+fallbacks = []

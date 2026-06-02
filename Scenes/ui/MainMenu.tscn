@@ -1,0 +1,389 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2s1i1k8w3ir2"]
+
+[ext_resource type="Script" path="res://Scripts/ui/MainMenu.gd" id="res_0"]
+[ext_resource type="FontFile" uid="uid://bpb2duj3lqevk" path="res://Assets/Fonts/DefaultFont.tres" id="res_1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_Primary"]
+bg_color = Color(0.0, 0.0, 0.0, 0.8)
+border_color = Color(0.0, 1.0, 0.0, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_Easy"]
+bg_color = Color(0.0, 0.0, 0.0, 0.8)
+border_color = Color(0.0, 1.0, 0.0, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_Medium"]
+bg_color = Color(0.0, 0.0, 0.0, 0.8)
+border_color = Color(1.0, 1.0, 0.0, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_Hard"]
+bg_color = Color(0.0, 0.0, 0.0, 0.8)
+border_color = Color(1.0, 0.0, 0.0, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_Online"]
+bg_color = Color(0.0, 0.0, 0.0, 0.8)
+border_color = Color(0.0, 1.0, 1.0, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_Exit"]
+bg_color = Color(0.0, 0.0, 0.0, 0.8)
+border_color = Color(1.0, 0.0, 0.0, 1.0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("res_0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1.0)
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="MainMenu"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = -100.0
+text = "NetWars: Cyber Card Battles"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="MainMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 0.0
+text = "PLAY"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="DeckManagerButton" type="Button" parent="MainMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 20.0
+offset_right = 150.0
+offset_bottom = 70.0
+text = "DECK MANAGER"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="SettingsButton" type="Button" parent="MainMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 90.0
+offset_right = 150.0
+offset_bottom = 140.0
+text = "SETTINGS"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="ExitButton" type="Button" parent="MainMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 160.0
+offset_right = 150.0
+offset_bottom = 210.0
+text = "EXIT"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Exit")
+theme_override_colors/font_color = Color(1.0, 0.0, 0.0, 1.0)
+
+[node name="PlayMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+
+[node name="Title" type="Label" parent="PlayMenu"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = -100.0
+text = "PLAY"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OfflineButton" type="Button" parent="PlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 0.0
+text = "OFFLINE PLAY"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="OnlineButton" type="Button" parent="PlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 20.0
+offset_right = 150.0
+offset_bottom = 70.0
+text = "ONLINE PLAY"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Online")
+theme_override_colors/font_color = Color(0.0, 1.0, 1.0, 1.0)
+
+[node name="BackButton" type="Button" parent="PlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 160.0
+offset_right = 150.0
+offset_bottom = 210.0
+text = "BACK"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="OfflinePlayMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+
+[node name="Title" type="Label" parent="OfflinePlayMenu"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = -100.0
+text = "SELECT DIFFICULTY"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EasyButton" type="Button" parent="OfflinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 0.0
+text = "EASY"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Easy")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="MediumButton" type="Button" parent="OfflinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 20.0
+offset_right = 150.0
+offset_bottom = 70.0
+text = "MEDIUM"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Medium")
+theme_override_colors/font_color = Color(1.0, 1.0, 0.0, 1.0)
+
+[node name="HardButton" type="Button" parent="OfflinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 90.0
+offset_right = 150.0
+offset_bottom = 140.0
+text = "HARD"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Hard")
+theme_override_colors/font_color = Color(1.0, 0.0, 0.0, 1.0)
+
+[node name="BackButton" type="Button" parent="OfflinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 160.0
+offset_right = 150.0
+offset_bottom = 210.0
+text = "BACK"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="OnlinePlayMenu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -200.0
+offset_right = 200.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+
+[node name="Title" type="Label" parent="OnlinePlayMenu"]
+layout_mode = 0
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = -100.0
+text = "ONLINE PLAY"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0.0, 1.0, 1.0, 1.0)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoginButton" type="Button" parent="OnlinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -50.0
+offset_right = 150.0
+offset_bottom = 0.0
+text = "LOG IN"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+
+[node name="HostButton" type="Button" parent="OnlinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 20.0
+offset_right = 150.0
+offset_bottom = 70.0
+text = "HOST GAME"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Online")
+theme_override_colors/font_color = Color(0.0, 1.0, 1.0, 1.0)
+
+[node name="JoinButton" type="Button" parent="OnlinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 90.0
+offset_right = 150.0
+offset_bottom = 140.0
+text = "JOIN GAME"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Online")
+theme_override_colors/font_color = Color(0.0, 1.0, 1.0, 1.0)
+
+[node name="BackButton" type="Button" parent="OnlinePlayMenu"]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 160.0
+offset_right = 150.0
+offset_bottom = 210.0
+text = "BACK"
+custom_fonts/font = ExtResource("res_1")
+custom_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBox_Primary")
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dqk7rrqo3v0de"]
 
-[ext_resource type="Texture2D" uid="uid://ccfmnpjtbwmu7" path="res://Assets/BackCard.png" id="1_57cf8"]
+[ext_resource type="Texture2D" uid="uid://c5eii105vvi5c" path="res://Assets/Sentinel Back Card.png" id="1_57cf8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0g7pp"]
 size = Vector2(88, 124)
@@ -9,8 +9,9 @@ size = Vector2(88, 124)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2031185877]
 z_index = -2
-position = Vector2(3.8146973e-06, -1.9073486e-06)
-scale = Vector2(0.23157898, 0.21836564)
+texture_filter = 1
+position = Vector2(0.49999827, -2.682209e-07)
+scale = Vector2(1.515625, 1.3333333)
 texture = ExtResource("1_57cf8")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1170194740]

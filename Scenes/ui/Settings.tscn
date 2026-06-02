@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2v4c8w3h3ir2"]
+
+[ext_resource type="Script" path="res://Scripts/ui/Settings.gd" id="res_0"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("res_0")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.05, 0.05, 0.1, 1.0)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 50.0
+offset_right = 1820.0
+offset_bottom = 120.0
+text = "SETTINGS"
+custom_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)
+horizontal_alignment = 1
+
+[node name="SettingsList" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -200.0
+offset_right = 300.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="SettingsList"]
+layout_mode = 2
+text = "[Game settings options will appear here]"
+theme_override_colors/font_color = Color(0.5, 0.5, 0.5, 1.0)
+horizontal_alignment = 1
+
+[node name="BackButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 860.0
+offset_top = 950.0
+offset_right = 1060.0
+offset_bottom = 1000.0
+text = "BACK"
+custom_font_sizes/font_size = 24
+theme_override_colors/font_color = Color(0.0, 1.0, 0.0, 1.0)

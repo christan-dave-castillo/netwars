@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxa6gfcj7amfr"]
 
 [ext_resource type="Texture2D" uid="uid://d33p1sgg8in6y" path="res://Assets/CardSlot.png" id="1_5tl20"]
+[ext_resource type="Script" uid="uid://8a3b8c9d0e1f" path="res://Scripts/CardSlotIndicator.gd" id="2_indicator"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tl20"]
 size = Vector2(88, 122)
@@ -18,3 +19,6 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1554479360]
 shape = SubResource("RectangleShape2D_5tl20")
+
+[node name="CardSlotIndicator" type="Node2D" parent="." unique_id=3044102051]
+script = ExtResource("2_indicator")

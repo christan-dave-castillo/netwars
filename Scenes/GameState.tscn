@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://d1b5c7u3h4jr2"]
+
+[ext_resource type="Script" path="res://Scripts/globals/GameState.gd" id="res_0"]
+
+[node name="GameState" type="Node"]
+script = ExtResource("res_0")

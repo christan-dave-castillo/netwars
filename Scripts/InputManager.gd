@@ -1,7 +1,14 @@
 extends Node2D
 
+# Mouse button signals
 signal left_mouse_button_clicked
 signal left_mouse_button_released
+
+# Input action signals - emitted when specific objects are clicked
+# Prevents tight coupling between InputManager and target nodes
+signal card_clicked(card: Node)
+signal deck_clicked
+signal opponent_card_clicked(card: Node)
 
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_DECK = 4
@@ -9,10 +16,16 @@ const COLLISION_MASK_OPPONENT_CARD = 8
 
 var card_manager_reference
 var deck_reference
+var input_disabled
+
 
 func _ready() -> void:
-	card_manager_reference = $"../CardManager"
-	deck_reference = $"../Deck"
+	card_manager_reference = get_parent().get_node_or_null("CardManager")
+	deck_reference = get_parent().get_node_or_null("Deck")
+	if not card_manager_reference:
+		push_error("InputManager: CardManager node not found!")
+	if not deck_reference:
+		push_error("InputManager: Deck node not found!")
 
 
 
@@ -26,6 +39,8 @@ func _input(event):
 
 
 func raycast_at_cursor():
+	if input_disabled:
+		return
 	var space_state = get_world_2d().direct_space_state
 	var parameters = PhysicsPointQueryParameters2D.new()
 	parameters.position = get_viewport().get_mouse_position()
@@ -36,8 +51,11 @@ func raycast_at_cursor():
 		if result_collision_mask == COLLISION_MASK_CARD:
 			var card_found = result[0].collider.get_parent()
 			if card_found:
-				card_manager_reference.card_clicked(card_found)
+				# Emit signal instead of calling card_manager.card_clicked() directly
+				emit_signal("card_clicked", card_found)
 		elif result_collision_mask == COLLISION_MASK_DECK:
-			deck_reference.draw_card()
+			# Emit signal instead of calling deck.draw_card() directly
+			emit_signal("deck_clicked")
 		elif result_collision_mask == COLLISION_MASK_OPPONENT_CARD:
-			$"../BattleManager".enemy_card_selected(result[0].collider.get_parent())
+			# Emit signal instead of calling battle_manager.enemy_card_selected() directly
+			emit_signal("opponent_card_clicked", result[0].collider.get_parent())
